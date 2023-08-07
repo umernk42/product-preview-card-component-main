@@ -9,21 +9,21 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="images/product-100.png"
     />
 
-    <title>Frontend Mentor | Product preview card component</title>
+    <title>Product preview component</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="outer-box">
-      <div id="comp-1">
+    <div id="outer-box" class="outer-box">
+      <div class="comp-1" id="comp-1">
         <img src="images/image-product-mobile.jpg" />
       </div>
-      <div id="comp-2">
+      <div class="comp-2" id="comp-2">
         <div class="content">
-          <p>P E R F U M E</p>
+          <p class="main-title">PERFUME</p>
 
           <h2>Gabrielle Essence Eau De Parfum</h2>
 
@@ -41,9 +41,12 @@
           </div>
         </div>
         <div class="btn">
-          <button>Add to Cart</button>
+          <button id="cartBtn">Add to Cart</button>
         </div>
       </div>
+    </div>
+    <div class="addMsg" id="addMsg">
+      Item Added to cart
     </div>
   </body>
 

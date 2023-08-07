@@ -18,9 +18,8 @@ html{
 
 body{
     background: hsl(30, 38%, 92%);
-    /* padding: 3rem 2rem; */
-    height: 100vh;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 p{
@@ -31,14 +30,28 @@ p{
 
 
 
-#outer-box{
-    height: 600px;
-    width: 90%;
+.outer-box{
+    max-width: 350px;
     background: hsl(0, 0%, 100%);
-    margin: 3rem auto;
+    margin-top: 3rem;
     border: 2px solid hsl(30, 38%, 92%);
     border-radius: 15px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.addMsg{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+    color: lightgray;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
 }
 
 img{
@@ -46,41 +59,28 @@ img{
     height: 100%;
 }
 
-#comp-1{
-    width: 100%;
-    height: 45%;
-    /* background : rgb(95, 194, 154); */
- /*    background-image: url('images/image-product-mobile.jpg');
-    background-size: fit; */
-}
-
-#comp-2{
-    width: 90%;
-    height: 55%;
-    margin: 0 auto;
-    /* background : rgb(9, 121, 76); */
+.comp-2{
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
-.content{
-   /*  background-color: rgb(205, 196, 108); */
-    flex-basis:40%;
+.main-title{
+    letter-spacing: 0.4rem;
 }
+
+
 
 .price{
-    /* background-color: rgb(207, 189, 33); */
-    flex-basis: 30%;
     display: flex;
     align-items: center;
 }
 
 .btn{
-   /*  background-color: rgb(96, 87, 5); */
-    flex-basis: 25%;
     display:flex;
     align-items: center;
     justify-content: center;
+    height: 70px;
 }
 
 #New_Price{
@@ -114,25 +114,28 @@ button{
 
 button:hover{
     background-color: hsla(158, 36%, 37%, 0.77);
+    cursor: pointer;
 }
 
-@media(min-width: 576px){
-    #outer-box{
-        display: flex;
-        height: 70%;
-        width: 70%;
-        margin: 5% auto 10%;
-        line-height: 2rem;
-        
+@media(min-width: 992px){
+    body{
+        height: 100vh;
+        align-items: center;
     }
 
-    #comp-1,#comp-2{
-        height: 100%;
+    .outer-box{
+        display: flex;
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .comp-1,.comp-2{
         flex-basis: 50%;
     }
 
 
-    #comp-2{
+    .comp-2{
         padding: 1rem;
+        row-gap: 2rem;
     }
 }
